@@ -7,7 +7,7 @@
 			data: {
                                                     //here I ve changed for lang and title
 				
-				lang: $('#selLanguage').val()
+	lang: $('#selLanguage').val()
         title: $('#selTitle').val(),
 			},
 			success: function(result) {
@@ -15,12 +15,11 @@
 				console.log(result);
 
 				if (result.status.name == "ok") {
-                                                                        //#id I am going to change on the and when everything will works 
-					$('#txtContinent').html(result['data'][0]['countryName']);
-					$('#txtCapital').html(result['data'][0]['currencyCode']);
-					$('#txtLanguages').html(result['data'][0]['languages']);
-					$('#txtPopulation').html(result['data'][0]['isoAlpha3']);
-					$('#txtArea').html(result['data'][0]['isoNumeric']);
+                                                                         
+					$('#txtCode').html(result['data'][0]['countryCode']);
+					$('#txtTitle').html(result['data'][0]['title']);
+					$('#txtSummary').html(result['data'][0]['summary']);
+					$('#txtThumbnailImg').html(result['data'][0]['thumbnailImg']);
 
 				}
 			
